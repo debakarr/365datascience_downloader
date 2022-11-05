@@ -29,7 +29,7 @@ Once you have pasted `authorization_token` and `policy_key`, you can update the 
 }
 ```
 
-### Install the requirement and run script to download course
+#### Download single course
 
 1. Create Python virtual environment and activate it.
 
@@ -83,7 +83,7 @@ NOTE: How to activate virtual environment might vary based on OS. Check [officia
 
 </details>
 
-### Download all video
+#### Download all course
 
 1. Create virtual environment, activate it and install all dependency. Follow previous section for detailed step.
 2. Run the course download script: `python src/download_all_course.py`
