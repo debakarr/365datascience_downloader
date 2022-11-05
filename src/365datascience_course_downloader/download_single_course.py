@@ -115,6 +115,7 @@ def download_course_resource(course_url: str, authorization_token: str) -> None:
             / normalize_name(course_data.info.name)
             / f"{course_slug}_{i}.zip"
         )
+        file_path.parent.mkdir(parents=True, exist_ok=True)
         print(f"Downloading {file_path}...")
         urllib.request.urlretrieve(course_resource_url, file_path)
 
