@@ -5,7 +5,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
-from downloader_single_course import download_course, download_course_resource
+from download_single_course import download_course, download_course_resource
 
 if __name__ == "__main__":
     base_url = "https://365datascience.com/"
