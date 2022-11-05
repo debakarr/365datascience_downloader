@@ -2,7 +2,7 @@
 name = "365datascience-course-downloader"
 version = "0.1.0"
 description = "Simple course downloader for 365datascience.com"
-authors = ["Roy, Debakar <debakar.roy@intel.com>"]
+authors = ["Roy, Debakar <debakar.roy@outlook.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
