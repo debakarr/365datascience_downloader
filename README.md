@@ -88,3 +88,4 @@ NOTE: How to activate virtual environment might vary based on OS. Check [officia
 - [ ] Download subtitles
 - [ ] Download all course resource
 - [ ] Download all course
+- [ ] Add Google colab notebook
