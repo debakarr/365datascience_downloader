@@ -41,7 +41,7 @@ python -m venv .env
 NOTE: How to activate virtual environment might vary based on OS. Check [official documentation](https://docs.python.org/3/library/venv.html).
 
 2. Install dependencies: `pip install -r requirements.txt`
-3. Run the course download script: `python src/downloader_single_course.py`
+3. Run the course download script: `python src/download_single_course.py`
 4. Once over you will find the course in your downlods folder.
 
 <details>
@@ -83,9 +83,14 @@ NOTE: How to activate virtual environment might vary based on OS. Check [officia
 
 </details>
 
+### Download all video
+
+1. Create virtual environment, activate it and install all dependency. Follow previous section for detailed step.
+2. Run the course download script: `python src/download_all_course.py`
+
 ## TODO
 
-- [ ] Download subtitles
-- [ ] Download all course resource
-- [ ] Download all course
+- [x] Download subtitles
+- [x] Download all course resource
+- [x] Download all course
 - [ ] Add Google colab notebook
