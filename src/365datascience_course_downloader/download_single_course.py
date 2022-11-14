@@ -6,6 +6,14 @@ from typing import List
 
 import requests
 import yt_dlp
+from yt_dlp.postprocessor import (
+    FFmpegFixupM3u8PP,
+    FFmpegFixupM4aPP,
+    FFmpegFixupStretchedPP,
+    FFmpegMergerPP,
+    FFmpegPostProcessor,
+    get_postprocessor,
+)
 
 from course_model import CourseModel
 from video_model import VideoModel
