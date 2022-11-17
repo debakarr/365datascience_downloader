@@ -8,7 +8,7 @@ Simple course downloader for 365datascience.com
 1. Open any [course video](https://learn.365datascience.com/courses/web-scraping-and-api-fundamentals-in-python/what-does-the-course-cover/). If it's prompt you to sign-in, then do so.
 2. Open [developer tool in browser](https://www.computerhope.com/issues/ch002153.htm) and go to the **Network** tab.
 3. Reload the page (CTRL + R).
-4. Search for `cookie-domain:.365datascience.com cookie-name:accessToken` -> Go to Cookies tab -> Copy the accessToken -> Paste in [input.json](src\365datascience_course_downloader\input.json) in `authorization_token`.
+4. Search for `cookie-domain:.365datascience.com cookie-name:accessToken` or `cookie-domain:.365datascience.com cookie-name:refreshToken` -> Go to Cookies tab -> Copy the accessToken or refreshToken (I would suggest copy the refreshToken) -> Paste in [input.json](src\365datascience_course_downloader\input.json) in `authorization_token`.
 
 ![](static/copy_access_token.png)
 
