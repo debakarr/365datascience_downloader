@@ -6,7 +6,6 @@ from typing import List
 
 import requests
 import yt_dlp
-
 from course_model import CourseModel
 from video_model import VideoModel
 
@@ -43,6 +42,7 @@ def request_365datascience_course_api(course_slug: str, authorization_token: str
         "Authorization": f"Bearer {authorization_token}",
     }
     response = requests.get(course_api_url, headers=headers_for_365datascience)
+    response.raise_for_status()
     return CourseModel.parse_raw(response.text)
 
 
@@ -65,6 +65,7 @@ def request_365datascience_course_resource_api(course_slug: str, course_id: int,
     }
 
     response = requests.post(course_resource_api_url, headers=headers_for_365datascience, json=json_data)
+    response.raise_for_status()
     return json.loads(response.text)
 
 
