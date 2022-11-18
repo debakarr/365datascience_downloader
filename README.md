@@ -1,6 +1,11 @@
 # 365datascience_downloader
 Simple course downloader for 365datascience.com
 
+## Pre-Requisite
+
+1. Install [ffmpeg](https://www.videoproc.com/resource/how-to-install-ffmpeg.htm)
+2. Install [Python 3.8+](https://www.xda-developers.com/how-to-install-python/)
+
 ## Usage
 
 ### Get authorization token and policy key to access API.
