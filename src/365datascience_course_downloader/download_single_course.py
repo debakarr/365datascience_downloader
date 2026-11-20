@@ -8,6 +8,7 @@ import requests
 import yt_dlp
 from course_model import CourseModel
 from video_model import VideoModel
+from pydantic import ValidationError
 
 
 def normalize_name(name: str) -> str:
@@ -32,7 +33,7 @@ def download_video_from_stream_url(video_stream_url: str, filepath: str, quality
 
 
 def request_365datascience_course_api(course_slug: str, authorization_token: str) -> CourseModel:
-    course_api_url = f"https://api.365datascience.com/courses/{course_slug}/player"
+    course_api_url = f"https://api.365datascience.com/courses/{course_slug}/player?ncap=1"
     headers_for_365datascience = {
         "authority": "api.365datascience.com",
         "accept": "application/json, text/plain, */*",
@@ -43,7 +44,7 @@ def request_365datascience_course_api(course_slug: str, authorization_token: str
     }
     response = requests.get(course_api_url, headers=headers_for_365datascience)
     response.raise_for_status()
-    return CourseModel.parse_raw(response.text)
+    return CourseModel.model_validate_json(response.text)
 
 
 def request_365datascience_course_resource_api(course_slug: str, course_id: int, authorization_token: str) -> List[str]:

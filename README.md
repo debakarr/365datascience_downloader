@@ -4,7 +4,8 @@ Simple course downloader for 365datascience.com
 ## Pre-Requisite
 
 1. Install [ffmpeg](https://www.videoproc.com/resource/how-to-install-ffmpeg.htm)
-2. Install [Python 3.8+](https://www.xda-developers.com/how-to-install-python/)
+2. Install [Python 3.8+](https://wiki.python.org/python/getting-started/BeginnersGuide/Download.html)
+3. Install [uv](https://docs.astral.sh/uv/getting-started/installation/) for managing virtual environment.
 
 ## Usage
 
@@ -36,18 +37,10 @@ Once you have pasted `authorization_token` and `policy_key`, you can update the 
 
 #### Download single course
 
-1. Create Python virtual environment and activate it.
+1. Run `uv sync` to install dependencies.
+2. Run `uv run src/365datascience_course_downloader/download_single_course.py` to download course.
+3. Once over you will find the course in your downlods folder.
 
-```console
-python -m venv .env
-.env/Script/activate
-```
-
-NOTE: How to activate virtual environment might vary based on OS. Check [official documentation](https://docs.python.org/3/library/venv.html).
-
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run the course download script: `python src/download_single_course.py`
-4. Once over you will find the course in your downlods folder.
 
 <details>
 <summary>Download folder for "Introduction to Data and Data Science" course:</summary>
